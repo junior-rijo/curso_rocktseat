@@ -1,1 +1,3 @@
-alert('Olá Mundo!')
+function mostraAlerta() {
+    alert('Botão clicado')
+}
