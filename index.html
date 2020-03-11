@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso JS</title>
-    <script src="style.js">Scripts</script>
+    <!--<script src="style.js">Scripts</script>-->
 </head>
 <body>
     <div id="app">
         <input type="text" name="nome">
         <button class="botao">Adcionar</button>
     </div>
-    
+<script>
+    var inputElement = document.querySelector('input[name=nome]');
+    var btnElement = document.querySelector('button.botao');
+
+btnElement.onclick = function () {
+    var text = inputElement.value
+    alert(text)
+}
+
+</script>   
 </body>
 </html>
