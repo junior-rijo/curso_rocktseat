@@ -8,18 +8,17 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" name="nome">
-        <button class="botao">Adcionar</button>
+        
     </div>
 <script>
-    var inputElement = document.querySelector('input[name=nome]');
-    var btnElement = document.querySelector('button.botao');
+    var linkElement = document.createElement('a')
+    linkElement.setAttribute('href', 'https://jrsites.com.br/')
+    
+    var textElement = document.createTextNode('Acessar o site')
+    linkElement.appendChild(textElement);
 
-btnElement.onclick = function () {
-    var text = inputElement.value
-    alert(text)
-}
-
+    var containerElement = document.querySelector('#app')
+    containerElement.appendChild(linkElement);
 </script>   
 </body>
 </html>
