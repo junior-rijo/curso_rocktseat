@@ -15,8 +15,22 @@ function renderTodos() {
         var todoElement = document.createElement('li');
         var todoText = document.createTextNode(todo);
 
+        var linkElement = document.createElement('a');
+
+        linkElement.setAttribute('href', '#')
+
+        var pos = todos.indexOf(todo);//(indexOf)procura a posição do array
+
+        linkElement.setAttribute('onclick', 'deleTodo('+ pos +')')
+
+        var linkText = document.createTextNode('Excluir')
+
+        linkElement.appendChild(linkText);
+
         todoElement.appendChild(todoText);
-        listElement.appendChild(todoElement);
+        todoElement.appendChild(linkElement);
+
+        listElement.appendChild(todoElement)
 
     }
 }
@@ -33,6 +47,10 @@ function addTodo() {//adcionando novo item
 
 buttonElement.onclick = addTodo;//função do botão
 
+function deleTodo(pos) {
+    todos.splice(pos, 1);
+    renderTodos();
+}
 //var inputElement = document.querySelector('input[name=nome]');
 //var btnElement = document.querySelector('button.botao');
 
