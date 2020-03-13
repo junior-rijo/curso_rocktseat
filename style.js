@@ -23,15 +23,15 @@ function renderTodos() {
 
 renderTodos();
 
-function addTodo() {
-    var todoText = inputElement.value;
+function addTodo() {//adcionando novo item
+    var todoText = inputElement.value;//recupando o valor do elemento
 
-    todos.push(todoText);
-    inputElement.value = '';
-    renderTodos();
+    todos.push(todoText);//função do array para adcionar um array
+    inputElement.value = '';//
+    renderTodos();//chama ela novamente para renderizar todos os elementos 
 }
 
-buttonElement.onclick = addTodo;
+buttonElement.onclick = addTodo;//função do botão
 
 //var inputElement = document.querySelector('input[name=nome]');
 //var btnElement = document.querySelector('button.botao');
